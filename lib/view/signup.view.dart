@@ -1,13 +1,15 @@
+import 'package:flutter/material.dart';
 import 'package:blogcat/view/widgets/button.global.dart';
 import 'package:blogcat/view/widgets/social.login.dart';
 import 'package:blogcat/view/widgets/text.form.global.dart';
-import 'package:flutter/material.dart';
-import 'package:blogcat/view/signup.view.dart';
 
-class LoginView extends StatelessWidget {
-  LoginView({super.key});
+class Signup extends StatelessWidget {
+    Signup({super.key});
+
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _confirmPasswordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +29,7 @@ class LoginView extends StatelessWidget {
                 Column(
                   children: [
                     const Text(
-                      "Login to your account",
+                      "Create your account",
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -47,6 +49,13 @@ class LoginView extends StatelessWidget {
                       textInputType: TextInputType.text,
                       obscure: true,
                     ),
+                     const SizedBox(height: 20),
+                    TextFormGlobal(
+                      controller: _confirmPasswordController,
+                      text: 'Confirm Password',
+                      textInputType: TextInputType.text,
+                      obscure: true,
+                    ),
                     const SizedBox(height: 20),
                     ButtonGlobal(),
                     const SizedBox(height: 20),
@@ -58,28 +67,7 @@ class LoginView extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: Container(
-        color: Colors.white,
-        padding: const EdgeInsets.all(16.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text("Don't have an account?"),
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Signup()),
-                );
-              },
-              child: const Text(
-                "Sign Up",
-                style: TextStyle(decoration: TextDecoration.underline),
-              ),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
+
