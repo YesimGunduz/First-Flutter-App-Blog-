@@ -57,8 +57,8 @@ class SocialLogin extends StatelessWidget {
                 print("Facebook Login");
               }),
               const SizedBox(width: 20),
-              socialButton('assets/images/x-svgrepo-com.svg', () {
-                print("Twitter Login");
+              socialButton('assets/images/instagram-2016-logo-svgrepo-com.svg', () {
+                print("Instagram Login");
               }),
             ],
           ),

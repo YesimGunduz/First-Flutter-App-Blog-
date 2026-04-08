@@ -9,7 +9,7 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Timer(const Duration(seconds: 2), () {Get.to(LoginView());
+    Timer(const Duration(seconds: 3), () {Get.to(LoginView());
     });
     return Scaffold(
       body: Stack(
@@ -22,16 +22,16 @@ class SplashView extends StatelessWidget {
             ),
           ),
 
-          // 2️⃣ Üstüne opsiyonel overlay (metni daha okunaklı yapar)
+          
           Container(
-            // ignore: deprecated_member_use
+            
             color: Colors.black.withOpacity(0.3),
           ),
 
-          // 3️⃣ Yazıyı yukarı taşımak için Column + Spacer
+          
           Column(
             children: [
-              Spacer(flex: 1), // Üstten boşluk
+              Spacer(flex: 1), 
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30.0),
                 child: Text(
@@ -60,7 +60,7 @@ class SplashView extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              Spacer(flex: 3), // Altta kalan boşluk
+              Spacer(flex: 3), 
             ],
           ),
         ],

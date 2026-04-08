@@ -1,14 +1,16 @@
+import 'package:blogcat/view/login.view.dart';
 import 'package:flutter/material.dart';
 import 'package:blogcat/view/widgets/button.global.dart';
 import 'package:blogcat/view/widgets/social.login.dart';
 import 'package:blogcat/view/widgets/text.form.global.dart';
 
 class Signup extends StatelessWidget {
-    Signup({super.key});
+  Signup({super.key});
 
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _confirmPasswordController = TextEditingController();
+  final TextEditingController _confirmPasswordController =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +51,7 @@ class Signup extends StatelessWidget {
                       textInputType: TextInputType.text,
                       obscure: true,
                     ),
-                     const SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     TextFormGlobal(
                       controller: _confirmPasswordController,
                       text: 'Confirm Password',
@@ -57,7 +59,15 @@ class Signup extends StatelessWidget {
                       obscure: true,
                     ),
                     const SizedBox(height: 20),
-                    ButtonGlobal(),
+                    ButtonGlobal(
+                      text: "Sign Up",
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(builder: (context) =>  LoginView()),
+                        );
+                      },
+                    ),
                     const SizedBox(height: 20),
                     SocialLogin(),
                   ],
@@ -70,4 +80,3 @@ class Signup extends StatelessWidget {
     );
   }
 }
-

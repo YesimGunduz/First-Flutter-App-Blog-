@@ -1,3 +1,4 @@
+import 'package:blogcat/view/home.page.view.dart';
 import 'package:blogcat/view/widgets/button.global.dart';
 import 'package:blogcat/view/widgets/social.login.dart';
 import 'package:blogcat/view/widgets/text.form.global.dart';
@@ -8,6 +9,7 @@ class LoginView extends StatelessWidget {
   LoginView({super.key});
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +50,17 @@ class LoginView extends StatelessWidget {
                       obscure: true,
                     ),
                     const SizedBox(height: 20),
-                    ButtonGlobal(),
+                    ButtonGlobal(
+                      text: "Sign In",
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HomePage(),
+                          ),
+                        );
+                      },
+                    ),
                     const SizedBox(height: 20),
                     SocialLogin(),
                   ],

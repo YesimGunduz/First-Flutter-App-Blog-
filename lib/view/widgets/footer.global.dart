@@ -11,7 +11,7 @@ class FooterGlobal extends StatelessWidget {
       child: Column(
         children: [
           const Text(
-            "David’in maceralarını keşfet, kedilerle dolu bir dünyaya katıl!",
+            "Discover David's adventures and join a world full of cats!",
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 16, color: Colors.black87),
           ),
@@ -20,15 +20,15 @@ class FooterGlobal extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               IconButton(
-                icon: const Icon(Icons.camera_alt), // Instagram yerine ikon
+                icon: const Icon(Icons.g_mobiledata), 
                 onPressed: () {},
               ),
               IconButton(
-                icon: const Icon(Icons.alternate_email), // Twitter yerine ikon
+                icon: const Icon(Icons.facebook), 
                 onPressed: () {},
               ),
               IconButton(
-                icon: const Icon(Icons.video_library), // TikTok yerine ikon
+                icon: const Icon(Icons.camera_alt), 
                 onPressed: () {},
               ),
             ],
