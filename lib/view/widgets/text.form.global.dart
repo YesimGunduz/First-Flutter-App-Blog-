@@ -1,13 +1,23 @@
 import 'package:flutter/material.dart';
 
 class TextFormGlobal extends StatelessWidget {
+<<<<<<< HEAD
   const TextFormGlobal({super.key, required this.controller, required this.text, required this.textInputType, required this.obscure});
+=======
+  const TextFormGlobal({super.key, required this.controller, required this.text, required this.textInputType, required this.obscure, this.errorText});
+>>>>>>> 7fd4a66 (update)
 
   final TextEditingController controller;
   final String text;
   final TextInputType textInputType;
   final bool obscure; 
 
+<<<<<<< HEAD
+=======
+  final String? errorText;
+
+  
+>>>>>>> 7fd4a66 (update)
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,10 +36,18 @@ class TextFormGlobal extends StatelessWidget {
         ],
       ),
       child: TextFormField(
+<<<<<<< HEAD
+=======
+        controller: controller,
+>>>>>>> 7fd4a66 (update)
         keyboardType: textInputType,
         obscureText: obscure,
         decoration: InputDecoration(
           hintText: text,
+<<<<<<< HEAD
+=======
+          errorText: errorText,
+>>>>>>> 7fd4a66 (update)
           border: InputBorder.none,
           contentPadding: const EdgeInsets.all(0),
           hintStyle: const TextStyle(height: 1),

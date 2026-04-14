@@ -3,11 +3,19 @@ import 'package:flutter/material.dart';
 class ButtonGlobal extends StatelessWidget {
   final String text; 
   final VoidCallback onPressed; 
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 7fd4a66 (update)
 
   const ButtonGlobal({
     super.key,
     required this.onPressed,
     required this.text,
+<<<<<<< HEAD
+=======
+    final Color? backgroundColor,
+>>>>>>> 7fd4a66 (update)
   });
 
   @override
